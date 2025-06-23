@@ -4,11 +4,11 @@ import { FaMap, FaMapMarkedAlt } from 'react-icons/fa';
 import { FaChartBar, FaListAlt } from 'react-icons/fa';
 
 //JSON
-import Json from "../updated_exhibitors_data.json"
-import adamClients from "../../python/adam/adamCustomerUSA&CAN.json"
-import billClients from "../../python/bill/billCustomerUSA&CAN.json";
-import boydClients from "../../python/boyd/boydCustomerUSA&CAN.json";
-import scottClients from "../../python/scott/scottCustomer.json";
+import Json from "../data/updated_exhibitors_data.json"
+import adamClients from "../data/python/adam/adamCustomerUSA&CAN.json"
+import billClients from "../data/python/bill/billCustomerUSA&CAN.json";
+import boydClients from "../data/python/boyd/boydCustomerUSA&CAN.json";
+import scottClients from "../data/python/scott/scottCustomer.json";
 
 //Components
 import haversineDistance from "../utils/haversineDistance.js";
