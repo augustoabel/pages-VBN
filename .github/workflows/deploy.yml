@@ -4,7 +4,7 @@ name: Build and Deploy to GitHub Pages
 # O gatilho: rodar sempre que houver um push na branch 'main'
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 # Permissões necessárias para a Action poder publicar no GitHub Pages
 permissions:
