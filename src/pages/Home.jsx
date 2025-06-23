@@ -5,10 +5,10 @@ import { FaChartBar, FaListAlt } from 'react-icons/fa';
 
 //JSON
 import Json from "../updated_exhibitors_data.json"
-import adamClients from "../../../python/adam/adamCustomerUSA&CAN.json"
-import billClients from "../../../python/bill/billCustomerUSA&CAN.json";
-import boydClients from "../../../python/boyd/boydCustomerUSA&CAN.json";
-import scottClients from "../../../python/scott/scottCustomer.json";
+import adamClients from "../../python/adam/adamCustomerUSA&CAN.json"
+import billClients from "../../python/bill/billCustomerUSA&CAN.json";
+import boydClients from "../../python/boyd/boydCustomerUSA&CAN.json";
+import scottClients from "../../python/scott/scottCustomer.json";
 
 //Components
 import haversineDistance from "../utils/haversineDistance.js";
