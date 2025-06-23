@@ -25,32 +25,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. Configura o Node.js
+      # 2. PRIMEIRO, INSTALA O NODE.JS (MUITO IMPORTANTE)
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Pode usar a versão do Node que preferir
+          node-version: '20' 
           cache: 'npm'
 
-      # 3. Instala as dependências
+      # 3. DEPOIS, USA O NPM PARA INSTALAR AS DEPENDÊNCIAS
       - name: Install dependencies
         run: npm install
 
-      # 4. Roda o build (cria a pasta 'dist')
+      # 4. FINALMENTE, RODA O BUILD
       - name: Build
         run: npm run build
 
-      # 5. Configura o GitHub Pages para receber o deploy
+      # 5. E o resto dos passos para o deploy...
       - name: Setup Pages
         uses: actions/configure-pages@v5
-
-      # 6. Envia os artefatos do build para o GitHub Pages
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # O nome da sua pasta de build
+          path: './dist'
 
-      # 7. Finaliza o deploy
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
