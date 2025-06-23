@@ -2,7 +2,6 @@
   "name": "cultivate-dashboard",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://augustoabel.github.io/pages-VBN",
 
   "scripts": {
     "dev": "vite",
