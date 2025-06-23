@@ -1,52 +1,47 @@
-# Nome do seu fluxo de trabalho
 name: Build and Deploy to GitHub Pages
 
-# O gatilho: rodar sempre que houver um push na branch 'main'
 on:
   push:
     branches: [ "master" ]
 
-# Permissões necessárias para a Action poder publicar no GitHub Pages
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Define o que acontece quando o fluxo de trabalho é acionado
 jobs:
-  # O trabalho de build e deploy
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest # Rodar em um ambiente Linux
+    runs-on: ubuntu-latest
     steps:
-      # 1. Baixa o código do seu repositório
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 2. PRIMEIRO, INSTALA O NODE.JS (MUITO IMPORTANTE)
+      # DEBUG: Vamos ver quais arquivos foram baixados do repositório
+      - name: List files after checkout
+        run: ls -R
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' 
+          node-version: '20'
           cache: 'npm'
 
-      # 3. DEPOIS, USA O NPM PARA INSTALAR AS DEPENDÊNCIAS
       - name: Install dependencies
         run: npm install
 
-      - name: Grant execute permission for Vite
-        run: chmod +x node_modules/.bin/vite
-
-      # 4. FINALMENTE, RODA O BUILD
       - name: Build
         run: npm run build
 
-      # 5. E o resto dos passos para o deploy...
+      # DEBUG: O passo mais importante! Vamos ver o que foi gerado na pasta 'dist'
+      - name: List files in dist directory
+        run: ls -R dist
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
