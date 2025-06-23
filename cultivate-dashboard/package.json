@@ -2,13 +2,14 @@
   "name": "cultivate-dashboard",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://github.com/augustoabel/pages-VBN",
+  "homepage": "https://augustoabel.github.io/pages-VBN",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages --no-history -d dist"
   },
   "dependencies": {
     "chart.js": "^4.4.0",
