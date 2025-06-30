@@ -64,18 +64,18 @@ function MapView({ associations }) {
             icon={icons.New}
           >
             <Popup>
-              <strong>{r.novoNome}</strong><br />
-              {r.novoEndereco}
+              <strong>{r.Name}</strong><br />
+              {r.Address}
             </Popup>
           </Marker>
 
           <Marker
             position={[r.clienteLat, r.clienteLng]}
-            icon={getIconForVendedor(r.vendedor)}
+            icon={getIconForVendedor(r.Sales_Manager)}
           >
             <Popup>
-              <strong>{r.clienteProximoNome}</strong><br />
-              {r.clienteProximoEndereco}
+              <strong>{r.Existing_Customer}</strong><br />
+              {r.Existing_Customer_Address}<br />
             </Popup>
           </Marker>
         </div>

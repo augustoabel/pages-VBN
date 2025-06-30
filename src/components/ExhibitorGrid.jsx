@@ -12,8 +12,9 @@ const ExhibitorGrid = ({ exhibitors }) => {
       {exhibitors.map((ex, idx) => (
         <div key={idx} className="bg-white p-6 rounded-lg shadow-md border">
           <h3 className="text-xl font-bold text-stone-800 mb-2">{ex.Company}</h3>
-          <p><strong>Estande:</strong> {ex.Phone}</p>
-          <p className="mt-2 text-sm text-stone-600 pl-4 border-l-2 border-stone-200 mt-1">
+          <p><strong>Phone:</strong> {ex.Phone}</p>
+          <p><strong>Booth Name:</strong> {ex.booth_name}</p>
+          <p className="mt-2 text-sm text-stone-600 pl-4 border-l-2 border-stone-200">
             {ex.Address?.map((line, i) => (
               <div key={i}>{line}</div>
             ))}

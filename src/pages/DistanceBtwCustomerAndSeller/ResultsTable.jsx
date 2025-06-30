@@ -18,12 +18,12 @@ function ResultsTable({ data }) {
           <tbody>
             {data.map((r, i) => (
               <tr key={i} className="border-t">
-                <td className="px-4 py-2 border">{r.novoNome}</td>
-                <td className="px-4 py-2 border">{r.novoEndereco}</td>
-                <td className="px-4 py-2 border">{r.vendedor}</td>
-                <td className="px-4 py-2 border">{r.clienteProximoNome}</td>
-                <td className="px-4 py-2 border">{r.clienteProximoEndereco}</td>
-                <td className="px-4 py-2 border">{r.distancia}</td>
+                <td className="px-4 py-2 border">{r.Name}</td>
+                <td className="px-4 py-2 border">{r.Address}</td>
+                <td className="px-4 py-2 border">{r.Sales_Manager}</td>
+                <td className="px-4 py-2 border">{r.Existing_Customer}</td>
+                <td className="px-4 py-2 border">{r.Existing_Customer_Address}</td>
+                <td className="px-4 py-2 border">{r.Distance}</td>
               </tr>
             ))}
           </tbody>

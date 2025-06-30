@@ -50,10 +50,10 @@ const Home = ({ setJsonData }) => {
         if (category !== "all") {
             result = result.filter(ex => ex.categoria === category);
         }
-
+        
         if (search.trim()) {
             result = result.filter(ex =>
-                [ex.nome, ...(ex.endereco || []), ex.telefone, ex.categoria]
+                [ex.Company, ...(ex.Address || []), ex.Phone, ex.categoria]
                     .filter(Boolean)
                     .join(" ")
                     .toLowerCase()
@@ -89,12 +89,12 @@ const Home = ({ setJsonData }) => {
                 }
 
                 lista.push({
-                    novoNome: novo.Company,
-                    novoEndereco: novo.Address.join(', '),
-                    vendedor: vendedorMaisProximo,
-                    clienteProximoNome: clienteMaisProximo.Company,
-                    clienteProximoEndereco: `${clienteMaisProximo.Address}, ${clienteMaisProximo.City}, ${clienteMaisProximo.Province}, ${clienteMaisProximo.Country}, ${clienteMaisProximo["Postal Code"]}`,
-                    distancia: menorDistancia.toFixed(2),
+                    Name: novo.Company,
+                    Address: novo.Address.join(', '),
+                    Sales_Manager: vendedorMaisProximo,
+                    Existing_Customer: clienteMaisProximo.Company,
+                    Existing_Customer_Address: `${clienteMaisProximo.Address}, ${clienteMaisProximo.City}, ${clienteMaisProximo.Province}, ${clienteMaisProximo.Country}, ${clienteMaisProximo["Postal Code"]}`,
+                    Distance: menorDistancia.toFixed(2),
                     novoLat: novo.lat,
                     novoLng: novo.lng,
                     clienteLat: clienteMaisProximo.lat,

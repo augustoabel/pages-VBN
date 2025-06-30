@@ -8,8 +8,7 @@ import MapView from "./pages/DistanceBtwCustomerAndSeller/MapView.jsx";
 function App() {
   const [jsonData, setJsonData] = useState(null);
   return (
-    // ADICIONE A PROPRIEDADE 'basename' AQUI
-    <Router basename="/pages-vbn">
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Home setJsonData={setJsonData} />} />
         <Route path="/results" element={<ResultsTable data={jsonData} />} />

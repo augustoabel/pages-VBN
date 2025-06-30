@@ -5,7 +5,7 @@ const Filters = ({ categories, setCategory, search, setSearch }) => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <input
           type="text"
-          placeholder="Pesquisar por nome, endereço, estande..."
+          placeholder="Search by name or address"
           value={search}
           onChange={e => setSearch(e.target.value)}
           className="p-2 border rounded-md w-full col-span-2"

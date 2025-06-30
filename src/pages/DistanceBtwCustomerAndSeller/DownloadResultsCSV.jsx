@@ -2,7 +2,7 @@ import React from 'react';
 import { FaFileExcel } from 'react-icons/fa'; 
 const downloadCSV = (data, filename = 'dados.csv') => {
   if (!data || !data.length) return;
-
+  console.log('Downloading CSV:', data);
   const headers = Object.keys(data[0]);
   const csvRows = [
     headers.join(','), // Cabeçalho
@@ -29,7 +29,7 @@ const DownloadResultsCSV = ({ associations }) => {
   return (
     <button
       className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 font-semibold"
-      onClick={() => downloadCSV(associations, 'associacoes.csv')}
+      onClick={() => downloadCSV(associations, 'associations.csv')}
     > <FaFileExcel className="inline mr-2" />
       Download CSV
     </button>

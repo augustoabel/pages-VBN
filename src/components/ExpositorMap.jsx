@@ -130,8 +130,6 @@ const ExpositorMap = () => {
             ...processedOldClientsScott,
         ]);
 
-        console.log("Combined Map Data:", allExpositores);
-
     }, [newClientsData, oldClientsDataBoyd]); // Adicione outras dependências de dados aqui se tiver
 
     const calculateCenter = () => {
@@ -155,10 +153,10 @@ const ExpositorMap = () => {
         <>
             <div className='w-full mt-10 bg-white rounded-lg shadow-2xl p-4 flex'>
                 <div className='flex font-semibold me-10'><div className='me-2 mb-2 h-5 w-5 rounded bg-red-600'></div>Possible New Customer</div>
-                <div className='flex font-semibold me-10'><div className='me-2 mb-2 h-5 w-5 rounded bg-green-600'></div>Old Customer - Boyd</div>
-                <div className='flex font-semibold me-10'><div className='me-2 mb-2 h-5 w-5 rounded bg-blue-600'></div>Old Customer - Adam</div>
-                <div className='flex font-semibold me-10'><div className='me-2 mb-2 h-5 w-5 rounded bg-orange-600'></div>Old Customer - Bill</div>
-                <div className='flex font-semibold me-10'><div className='me-2 mb-2 h-5 w-5 rounded bg-gray-600'></div>Old Customer - Scott</div>
+                <div className='flex font-semibold me-10'><div className='me-2 mb-2 h-5 w-5 rounded bg-green-600'></div>Boyd</div>
+                <div className='flex font-semibold me-10'><div className='me-2 mb-2 h-5 w-5 rounded bg-blue-600'></div>Adam</div>
+                <div className='flex font-semibold me-10'><div className='me-2 mb-2 h-5 w-5 rounded bg-[#cc852e]'></div>Bill</div>
+                <div className='flex font-semibold me-10'><div className='me-2 mb-2 h-5 w-5 rounded bg-gray-600'></div>Scott</div>
             </div>
             <div className="h-[600px] w-full mt-2 mb-10 bg-white rounded-lg shadow-2xl p-4">
                 <MapContainer center={mapCenter} zoom={4} scrollWheelZoom className="h-full w-full">
